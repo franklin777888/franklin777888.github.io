@@ -1,0 +1,150 @@
+
+/* edit the product pictures */
+#wrapper {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin-top: 190px;
+}
+
+#wrapper .content {
+    width: 600px;
+    height: 550px;
+    overflow: hidden;
+}
+
+#wrapper > .content > .imgs {
+    width: 90%;
+    list-style: none;
+}
+
+#wrapper > .content > .imgs li {
+    box-sizing: border-box;
+    width: 90%;
+}
+
+#wrapper > .content > .imgs > li img {
+    width: 100%;
+    height: 100%;
+}
+
+#wrapper > .dots {
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+    top: 0px;
+    width: 100px;
+    list-style: none;
+}
+
+#wrapper > .dots li {
+    box-sizing: border-box;
+    width: 148px;
+    height: 148px;
+    padding: 2px;
+    border: 1px solid #ccc;
+    background: #F0F0F0;
+    margin-bottom: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#wrapper > .dots li:last-child {
+    margin-bottom: 0;
+}
+
+#wrapper > .dots li .dot_img {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #fff;
+}
+
+li.active {
+    padding: 1px !important;
+    border: 1px solid #f08080 !important;
+    background: #fff !important;
+}
+
+li.active .dot_img {
+    border: 3px solid #f4acb7 !important;
+}
+
+li.quiet {
+    padding: 2px;
+    border: 1px solid #ccc;
+    background: #F0F0F0;
+}
+
+li.quiet .dot_img {
+    border: 1px solid #fff;
+}
+
+
+/* edit the product description */
+.description{
+  position:absolute;
+  left: 55%;
+  top:18%;
+  width: 40%;
+  line-height:1.4;
+
+}
+
+#title{
+  font-family:Tahoma, Geneva, sans-serif;
+  font-size: 30pt;
+  position: relative;
+  left: 3%;
+}
+
+#descriptions{
+  font-family:Tahoma, Geneva, sans-serif;
+  position: relative;
+  font-size: 11pt;
+  border-left: 1px;
+  margin-left: 15%;
+  padding-left: 5%;
+  margin-right: 6%;
+  padding-right: 2%;
+  margin-top: 6%;
+  padding-top: 2%;
+}
+
+
+#price, #rating{
+  font-family:Tahoma, Geneva, sans-serif;
+  font-size: 15pt;
+  position: relative;
+}
+
+.checked{
+  font-size: 18pt;
+  position: relative;
+}
+
+span.checked{
+  color: orange;
+}
+
+
+#container {
+    margin-top: 15px;
+    border: none;
+    font-size: 18px;
+    font-family:Tahoma, Geneva, sans-serif;
+
+}
+
+
+#button {
+    width: 100px;
+    height: 35px;
+    margin-top: 35px;
+    background-color:#336366 ;
+    border: none;
+    font-size: 15px;
+    color: white;
+    box-shadow: 0 2px 2px 0;
+}
+
