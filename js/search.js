@@ -5,8 +5,9 @@ const searchTerm = urlParams.get('search');
 var showProducts = [];
 
 
+// search product by category
+// adding matching products to the new array showProducts
 function productSearchByCategory(productCollections, category){
-    
     for(let product of myProductArray){
         if(product.productCatalog.toLowerCase().includes(searchTerm.toLowerCase())){
             showProducts.push(product);
@@ -14,30 +15,35 @@ function productSearchByCategory(productCollections, category){
     }
 }
 
+// search product by name
+// includes() to avoid showing products twice if productName = productCategory
 function productSearchByName(productCollections, name){
     for(let product of myProductArray){
         if(product.productName.toLowerCase().includes(searchTerm.toLowerCase())){
             if(!showProducts.includes(product)){
                 showProducts.push(product);   
             }
-
         }
     }
 }
 
+// search all products without conditions
 function searchAllProducts(productCollections){
     for(let product of myProductArray){
         showProducts.push(product);
-    }
-    
+    } 
 }
 
+// display feature products in the index page
+// select products from first 3 items in the array
 function displayFeatureProducts(productCollections){
     for(let i=0; i<3; i++){
         document.write(myProductArray[i].productDetails());
     }
 }
 
+// search by category/name and display result
+// display all products instead if no result found
 function productSearchByTerm(productCollections, term){
     if(term!=""){
         productSearchByCategory(productCollections, term);
@@ -50,16 +56,12 @@ function productSearchByTerm(productCollections, term){
     else {
         searchAllProducts(productCollections);
     }
-    displaySelectedProducts();   
-}
-
-function displaySelectedProducts(){
     for(let product of showProducts){
         document.write(product.productDetails());
     }  
 }
 
-//function to sort products
+// function to sort products
 function sortProducts(arg) {
     if (arg.value == 'priceHighToLow') {
         showProducts.sort(function(a,b){
@@ -86,7 +88,7 @@ function sortProducts(arg) {
     
 }
     
-/*function to filter products*/
+// function to filter products
 function filter(field) {
     let filteredResult= [];
     if (field == 'price') {
